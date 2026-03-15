@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>重要メールの見落としゼロ、判断疲れゼロ。AIが毎朝30分を生み出す仕組み — Tom Log</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.6;color:#1a1a1a;background:#fff;max-width:800px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:1.3rem;font-weight:700;margin-bottom:0.5rem}
+.meta{color:#666;font-size:0.85rem;margin-bottom:2rem}
+h2{font-size:1.05rem;font-weight:600;margin:2rem 0 0.75rem;padding-bottom:0.4rem;border-bottom:1px solid #e5e5e5}
+table{width:100%;border-collapse:collapse;font-size:0.875rem;margin-bottom:1.5rem;border:1px solid #e5e5e5}
+th{background:#f5f5f5;font-weight:600;text-align:left;padding:0.6rem 0.8rem;border-bottom:2px solid #e5e5e5}
+td{padding:0.6rem 0.8rem;border-bottom:1px solid #eee}
+.script-line{border:1px solid #e5e5e5;border-radius:8px;padding:0.8rem 1rem;margin-bottom:0.5rem;border-left:3px solid #ccc}
+.speaker-tom{border-left-color:#00997a;margin-right:15%}
+.speaker-shawn{border-left-color:#0066cc;margin-left:15%}
+.speaker-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;margin-bottom:0.3rem}
+.speaker-tom .speaker-label{color:#00997a}
+.speaker-shawn .speaker-label{color:#0066cc}
+.line-text{font-size:0.875rem;white-space:pre-wrap}
+ul{padding-left:1.5rem;font-size:0.875rem;margin-bottom:1rem}
+li{margin-bottom:0.3rem}
+h3{font-size:0.95rem;font-weight:600;margin:1.25rem 0 0.5rem;color:#333}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #e5e5e5;text-align:center;color:#888;font-size:0.75rem}
+</style>
+</head>
+<body>
+<h1>重要メールの見落としゼロ、判断疲れゼロ。AIが毎朝30分を生み出す仕組み</h1>
+<div class="meta">2026-03-13 · 10min</div>
+
+<h2>構成概要</h2>
+<table><thead><tr><th>パート</th><th>時間</th><th>内容</th></tr></thead><tbody><tr><td>パート1: 前置き・雑談</td><td>3分</td><td>トムの朝のルーティン公開から始まり、多くの人が朝の貴重な判断力をメール仕分けで消耗している問題に触れる。ショーンが「確かに朝からメール見るのしんどいな」と共感し、トムが「実はこれ、全部自動化できるんだ」と切り出す。</td></tr><tr><td>パート2: 技術的な詳細</td><td>4分</td><td>アイゼンハワーマトリクスによるメール自動仕分けとカレンダー自動化の仕組みを詳しく解説。トムがライブラリアンの例え話でAIの仕分け機能を説明し、ショーンが実用性について深掘り。Claude CodeとGmail APIの技術的な話も交える。</td></tr><tr><td>パート3: 結果</td><td>3分</td><td>実際の効果（毎朝30分の節約）と導入の簡単さを紹介。5ステップのセットアップ方法を説明し、「一緒にやりましょう」のオファーで締めくくる。</td></tr></tbody></table>
+
+<h2>台本</h2>
+<div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">おはようございます、トムです！今日はですね、僕の朝のルーティンがどれだけ変わったかっていう話をしたいんですよ。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">おお、朝のルーティンね。トムって朝型だもんな。何が変わったの？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">実はですね、以前は朝起きてまずメールチェックから始めてたんですよ。7つのアカウントを見て、「これ重要かな？」「返信すべきかな？」って毎朝30分くらい判断に使ってたんです。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">あー、わかる！朝からそういう細かい判断するのって結構疲れるよね。</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">そうなんです！で、気づいたんですよ。FAの仕事って意思決定の連続じゃないですか。買い手候補の評価とか条件交渉とか。その肝心な判断力を、メール仕分けで使い果たしてるって。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">確かに。本来やるべき重要な判断の前に、準備で疲れちゃってるってことね。</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">まさに！で、この「準備」の部分を全部AIに任せることにしたんです。今は朝起きて「おはよう」って一言言うだけで、メールは自動で仕分けされて、今日のスケジュールも決まってる状態です。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">え、それすごいな。どうやってるの？具体的に教えてよ。</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">はい！まず核になってるのが、アイゼンハワーマトリクスっていう考え方なんです。アメリカの大統領だったアイゼンハワーが使ってたタスク管理の方法で...</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">あー、重要度と緊急度の4象限に分けるやつね。</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">そうです！これをメール処理に応用したんですよ。AIがメールを読んで、「重要かつ緊急」「重要だが緊急じゃない」「緊急だが重要じゃない」「どちらでもない」の4つに自動で振り分けてくれます。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">へー、でもAIってどうやって重要度を判断するの？主観的な部分もあるでしょ？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">いい質問ですね！判断軸はシンプルで、「これが対応漏れになったとき、仕事やプライベートに大きな損害や機会損失が発生するか？」で決めてます。例えて言うなら...図書館の司書さんみたいな感じですね。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">図書館の司書？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">はい。司書さんって、本の内容を読んで「これは歴史の棚」「これは料理の棚」って分類するじゃないですか。AIも同じように、メールの内容を読んで「これは契約関係だから重要緊急」「これはセミナー案内だから重要じゃない」って判断してくれるんです。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">なるほど！で、分類された後はどうなるの？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">Gmail APIを使って、自動でラベルを付与してます。「I-重要緊急」は赤ラベル、「II-重要長期」は橙ラベルって感じで。このラベルはアーカイブしても残るから、後で label:I-重要緊急 で検索すれば過去の重要メールも一覧できるんです。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">おお、それは便利だ。でもカレンダーの方も自動化してるって言ってたよね？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">そうなんです！これがもう一つの肝で、「今日何をいつやるか」の判断も自動化してます。重要だけど緊急じゃないQ2のタスクを午前10時〜12時に固定で入れて、緊急案件は午後に回すっていうルールにしてるんです。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">それって理にかなってるね。重要な仕事が後回しになるのを防げる。</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">まさに！戦略とか企画とか創造的な仕事って、つい先延ばししちゃうんですけど、午前の一番頭が冴えてる時間に意図的に配置することで、構造的な問題を解決してるんです。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">なるほど。で、これって導入するの大変なの？システム構築とか必要？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">実は全然大変じゃないんです！Claude CodeっていうツールのSkillファイルが2つあるだけなんですよ。/email-checkと/morningっていう2つのファイルで動いてます。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">Claude Code...最近よく聞くな。VSCodeの拡張機能？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">そうです！npm install一発でインストールできて、VSCodeの拡張機能から使えます。で、Gmail MCPとGoogle Calendar MCPを接続すれば、Claude CodeがGmailやカレンダーに直接書き込めるようになるんです。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">へー、MCPって何？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">Model Context Protocolの略で、AIが外部サービスと連携するための仕組みですね。OAuth認証を通すだけで、GmailとGoogle Calendarに読み書き権限を与えられます。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">で、実際どのくらい効果あったの？30分節約って本当？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">はい、本当に30分浮いてます！以前は朝のメールチェックと今日の予定立てで30分かかってたのが、今は「おはよう」って言うだけで全部終わってる状態です。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">それはでかいな。年間で考えると...</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">そうなんです！年間で182時間、つまり23営業日分の時間が生まれてるんですよ。この時間を戦略的な思考に使えるようになったのが一番大きいですね。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">23営業日...それは確かに大きい。設定は1人でもできる？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">設定自体は1時間程度でできます。Claude Codeインストールが5分、Gmail・カレンダー連携が20分、ラベル作成が5分って感じで。ただ一番重要なのは、判断ルールを作る部分なんです。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">判断ルール？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">はい。「この送信者からのメールは必ずQ2にして」とか「このキーワードが入ってたら重要緊急」とか、その人特有の分類のクセを設定する部分です。これは僕と一緒にやりましょう！って提案してるんです。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">あー、それは確かに一人一人違うもんな。過去のメールデータとかも参考にするの？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">そうです！その人がよく受け取るメールの送信者や、分類のクセ、カレンダーに入れたい時間帯...過去のデータが全部活きてくるんです。完成すれば、そのルールがそのままAIに引き継がれます。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">なるほど。で、テストはどうやるの？</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">「メール確認して」って打つだけです。7列の表が返ってきたら成功。翌朝からは「おはよう」の一言で全部自動で走るようになります。</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">それは簡単だ。リスナーで興味ある人いるだろうね。</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">ぜひ！詳細はtech.athearth.comの記事に書いてありますし、Claude Codeの詳しいセットアップ方法も別記事で紹介してます。一緒にやりたい方はお気軽に声かけてください！</p></div><div class="script-line speaker-shawn"><div class="speaker-label">ショーン</div><p class="line-text">毎朝30分って、積み重なると本当に大きいもんな。今日はありがとうございました！</p></div><div class="script-line speaker-tom"><div class="speaker-label">トム</div><p class="line-text">こちらこそ！朝の判断疲れから解放されて、本当にやりたい仕事に集中できるようになったのが一番の収穫でした。ありがとうございました！</p></div>
+
+<h2>補足メモ（制作用）</h2>
+<h3>アナロジーの対応表</h3>
+<table><thead><tr><th>技術用語</th><th>アナロジー</th><th>テロップ</th></tr></thead><tbody><tr><td>AIによるメール分類システム</td><td>図書館の司書が本を適切な棚に分類する作業</td><td>AI = 図書館司書</td></tr><tr><td>アイゼンハワーマトリクス</td><td>重要度と緊急度の4象限による整理</td><td>重要度 × 緊急度 = 4象限</td></tr><tr><td>判断コストの削減</td><td>朝の貴重な脳のエネルギーを本当に大切な判断に使う</td><td>朝の判断力を温存</td></tr></tbody></table>
+
+<h3>デモのタイミング</h3>
+<ul><li>03:30 - アイゼンハワーマトリクスの4象限図を表示</li><li>06:45 - Gmailのラベル分類画面をデモ</li><li>08:20 - Claude Codeの動作画面を実演</li><li>09:45 - 時間節約の効果（年間182時間）をグラフで表示</li></ul>
+
+<h3>OBSシーン切り替え</h3>
+<ul><li>00:00 - オープニング：2人の対話画面</li><li>03:30 - 図解シーン：アイゼンハワーマトリクス</li><li>05:15 - デモシーン：Gmail + Claude Code画面</li><li>08:00 - 結果シーン：効果のグラフ表示</li><li>09:30 - エンディング：2人の対話画面</li></ul>
+
+<footer>Tom Log Script Generator</footer>
+</body>
+</html>
